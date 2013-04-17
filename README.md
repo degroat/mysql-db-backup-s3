@@ -14,12 +14,19 @@ How to use:
 Edit config.py & add following parameters:
 
 key_id='AWS_ACCESS_KEY_ID'
+
 sec_key='AWS_SECRET_ACCESS_KEY'
+
 bucket_name='s3 bucket name'
+
 db_user='database user'
+
 db_pass='database password'
+
 db_name='database name'
+
 hostname='hostname or IP'
+
 
 How to run script:
 
