@@ -31,7 +31,7 @@ def backup():
 	os.remove(filename)
 	checkdate = datetime.date.today()-datetime.timedelta(30)
 	for key in bucket:
-		if str(key.last_modified.split('T')[0]) < str(checkdate)
+		if str(key.last_modified.split('T')[0]) < str(checkdate):
 			print "Deleting 30 Days Old Backup File %s" % (key.name)
 			bucket.delete_key(key.name)
 	print "----------------------------------------------------------------------------"
