@@ -23,7 +23,7 @@ def backup():
 	database = db_name
 	date = time.strftime('%Y-%m-%d')
 	filename = 'backup/%s.sql.gz' % (date)
-	os.popen("mysqldump -u%s -p%s -h %s -d %s | gzip -c > %s" % (username, password, hostname, database, filename))
+	os.popen("mysqldump -u%s -p%s -h %s %s | gzip -c > %s" % (username, password, hostname, database, filename))
 	upload = Key(bucket)
 	upload.key = "%s.sql.gz" % (date)
 	upload.set_contents_from_filename(filename)
